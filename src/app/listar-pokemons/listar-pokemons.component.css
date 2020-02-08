@@ -6,3 +6,7 @@
 .btnsFooter{
   margin-bottom: 30px;
 }
+
+#btnFavoritar{
+  float: right;
+}

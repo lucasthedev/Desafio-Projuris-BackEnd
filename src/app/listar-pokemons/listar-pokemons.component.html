@@ -10,18 +10,20 @@
         <thead>
           <tr>
             <th>Pokemon</th>
+            <th>Favoritar</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Buba</td>
+          <tr *ngFor="let pokemon of pokemons">
+            <td>{{pokemon.name}}</td>
+            <td><button id="btnFavoritar" class="btn btn-danger" (click)="favoritar(pokemon.name)">Favoritar</button></td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
   <div class="row btnsFooter">
-    <button id="btnAnterior" class="btn btn-primary">Anterior</button>
-    <button id="btnProximo" class="btn btn-primary">Próximo</button>
+    <button id="btnAnterior" class="btn btn-primary" (click)="previousPage()">Anterior</button>
+    <button id="btnProximo" class="btn btn-primary" (click)="nextPage()">Próximo</button>
   </div>
 </div>
